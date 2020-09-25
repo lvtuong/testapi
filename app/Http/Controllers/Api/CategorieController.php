@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Categories;
 use App\Models\Products;
+use App\Repositories\Categorie\CategorieRepository;
+use App\Repositories\Categorie\CategorieRepositoryEloquent;
 use Illuminate\Http\Request;
 
 class CategorieController extends Controller
@@ -14,9 +16,15 @@ class CategorieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $categorieModel;
+    public function __construct(CategorieRepositoryEloquent $categorieModel)
+    {
+        $this->categorieModel = $categorieModel;
+    }
+
     public function index()
     {
-        return Categories::all();
+        return $this->categorieModel->allCategorie();
     }
 
 
@@ -38,14 +46,7 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->name;
-        $slug = $request->slug;
-        $description = $request->description;
-        return Categories::create([
-            'name' => $name,
-            'slug' => $slug,
-            'description' => $description
-        ]);
+        return $this->categorieModel->createProduct($request->all());
     }
 
     /**
@@ -56,15 +57,7 @@ class CategorieController extends Controller
      */
     public function show($id)
     {
-
-
-        $cate = Categories::findOrFail($id)->products()->get();
-
-        foreach ($cate as $product){
-            dump($product->pivot->product_id);
-        }
-
-        return $cate;
+        return $this->categorieModel->showCategorie($id);
     }
 
     /**
@@ -85,15 +78,9 @@ class CategorieController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $update = Categories::find($request->id);
-
-        return $update->update([
-            'name' => $request->name,
-            'slug' => $request->slug,
-            'description' => $request->description,
-        ]);
+        return $this->categorieModel->updateCategorie($request);
 
     }
 
@@ -105,8 +92,6 @@ class CategorieController extends Controller
      */
     public function destroy($id)
     {
-        $delete = Categories::find($id);
-
-        $delete->delete();
+        $this->categorieModel->deleteCategorie($id);
     }
 }
