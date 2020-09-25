@@ -56,8 +56,13 @@ class CategorieController extends Controller
      */
     public function show($id)
     {
-        $cate = Categories::findOrFail($id);
-        foreach ($cate->products as $product){}
+
+
+        $cate = Categories::findOrFail($id)->products()->get();
+
+        foreach ($cate as $product){
+            dump($product->pivot->product_id);
+        }
 
         return $cate;
     }
@@ -83,6 +88,7 @@ class CategorieController extends Controller
     public function update(Request $request, $id)
     {
         $update = Categories::find($request->id);
+
         return $update->update([
             'name' => $request->name,
             'slug' => $request->slug,
@@ -99,8 +105,8 @@ class CategorieController extends Controller
      */
     public function destroy($id)
     {
-        //
         $delete = Categories::find($id);
+
         $delete->delete();
     }
 }

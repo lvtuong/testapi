@@ -11,11 +11,12 @@ class CatProController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return CategorieProduct[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return CategorieProduct::all();
+
     }
 
     /**

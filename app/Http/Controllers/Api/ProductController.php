@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Categories;
 use App\Models\Products;
+use App\Repositories\Product\ProductRepositoryEloquent;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,12 +12,18 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Products[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
      */
+    protected $productModel;
+
+    public function __construct(ProductRepositoryEloquent $productModel)
+    {
+        $this->productModel = $productModel;
+    }
+
     public function index()
     {
-
-        return Products::all();
+       return $this->productModel->allProduct();
     }
 
     /**
@@ -34,24 +40,11 @@ class ProductController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return string
      */
     public function store(Request $request)
     {
-        $name = $request->name;
-        $slug = $request->slug;
-        $description = $request->description;
-        $sku = $request->sku;
-        $price = $request->price;
-
-        return Products::create([
-            'name' => $name,
-            'slug' => $slug,
-            'description' => $description,
-            'sku' => $sku,
-            'price' => $price
-        ]);
-
+        return $this->productModel->createProduct($request->all());
     }
 
     /**
@@ -62,10 +55,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $pro = Products::findOrFail($id);
-      //  foreach ($pro->categories as $product){}
-
-        return $pro->categories;
+        return $this->productModel->showProduct($id);
     }
 
     /**
@@ -86,9 +76,9 @@ class ProductController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        return $this->productModel->updateProduct($request->all());
     }
 
     /**
@@ -99,7 +89,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $delete = Products::find($id);
-        $delete->delete();
+       return $this->productModel->deleteProduct($id);
     }
 }
