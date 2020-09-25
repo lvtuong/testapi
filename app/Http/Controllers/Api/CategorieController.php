@@ -46,7 +46,7 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->categorieModel->createProduct($request->all());
+        return $this->categorieModel->createCategorie($request->all());
     }
 
     /**

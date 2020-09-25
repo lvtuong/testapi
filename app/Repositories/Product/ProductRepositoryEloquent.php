@@ -45,9 +45,11 @@ class ProductRepositoryEloquent extends BaseRepository implements ProductReposit
 
     public function createProduct($data)
     {
+        $slug = $data['name'];
+        $slug = str_replace( ' ', '-', $slug );
         $this->productModel::create([
             'name' => $data['name'],
-            'slug' => $data['slug'],
+            'slug' => $slug,
             'description' => $data['description'],
             'sku' => $data['sku'],
             'price' => $data['price'],

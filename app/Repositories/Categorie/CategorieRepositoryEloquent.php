@@ -35,9 +35,11 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
 
     public function createCategorie($data)
     {
+        $slug = $data['name'];
+        $slug = str_replace( ' ', '-', $slug );
         return $this->categorieModel::create([
             'name' => $data['name'],
-            'slug' => $data['slug'],
+            'slug' => $slug,
             'description' => $data['description'],
         ]);
     }
