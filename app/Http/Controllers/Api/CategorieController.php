@@ -80,7 +80,8 @@ class CategorieController extends Controller
      */
     public function update(Request $request)
     {
-        return $this->categorieModel->updateCategorie($request);
+
+        return $this->categorieModel->updateCategorie($request->all());
 
     }
 

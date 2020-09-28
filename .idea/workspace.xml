@@ -25,7 +25,7 @@
     <list default="true" id="aaaf827c-5f6a-467c-84b8-fc6e8e97d6b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategorieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategorieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepositoryEloquent.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +207,8 @@
       <workItem from="1600933122067" duration="2011000" />
       <workItem from="1600935154475" duration="8680000" />
       <workItem from="1600997020406" duration="8841000" />
-      <workItem from="1601017082609" duration="10736000" />
+      <workItem from="1601017082609" duration="10970000" />
+      <workItem from="1601258442936" duration="2604000" />
     </task>
     <servers />
   </component>
@@ -224,6 +225,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="336" y="79" width="732" height="644" key="#Inspections" timestamp="1601020030386">

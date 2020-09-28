@@ -46,7 +46,8 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
 
     public function showCategorie($id)
     {
-        return $cate = $this->categorieModel::findOrFail($id)->products()->get();
+//        return $cate = $this->categorieModel::findOrFail($id)->products()->get();
+        return $cate = $this->categorieModel::findOrFail($id);
 //        foreach ($cate as $product){
 //            return $product->pivot->categorie_id;
 //        }
