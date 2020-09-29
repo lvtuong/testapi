@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Categories;
-use App\Models\Products;
-use App\Repositories\Categorie\CategorieRepository;
+use App\Http\Requests\CreateUpdateCategoriRequest;
+
+use App\Http\Requests\UpdateCategori;
 use App\Repositories\Categorie\CategorieRepositoryEloquent;
 use Illuminate\Http\Request;
 
@@ -44,7 +44,7 @@ class CategorieController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateUpdateCategoriRequest $request)
     {
         return $this->categorieModel->createCategorie($request->all());
     }
@@ -78,7 +78,7 @@ class CategorieController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(CreateUpdateCategoriRequest $request)
     {
 
         return $this->categorieModel->updateCategorie($request->all());

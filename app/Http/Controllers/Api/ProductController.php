@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateUpdateProductResquest;
 use App\Models\Products;
 use App\Repositories\Product\ProductRepositoryEloquent;
 
@@ -43,7 +44,7 @@ class ProductController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return string
      */
-    public function store(Request $request)
+    public function store(CreateUpdateProductResquest $request)
     {
         return $this->productModel->createProduct($request->all());
     }
@@ -77,7 +78,7 @@ class ProductController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(CreateUpdateProductResquest $request)
     {
         return $this->productModel->updateProduct($request->all());
     }

@@ -23,9 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaaf827c-5f6a-467c-84b8-fc6e8e97d6b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CatProController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CatProController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategorieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategorieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/PassportAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PassportAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ResponseController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CategorieProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CategorieProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_24_015123_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_24_015123_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_24_020051_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_24_020051_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_24_064317_categorie_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_24_064317_categorie_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_070247_create_product\_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_25_070247_create_product\_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_074354_create_product\_products_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_091745_create_categorie\_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_25_091745_create_categorie\_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +204,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Requests" />
+      <recent name="$PROJECT_DIR$/app/Http/Requests/Categori" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -209,6 +234,9 @@
       <workItem from="1600997020406" duration="8841000" />
       <workItem from="1601017082609" duration="10970000" />
       <workItem from="1601258442936" duration="2604000" />
+      <workItem from="1601353211996" duration="466000" />
+      <workItem from="1601363475983" duration="2788000" />
+      <workItem from="1601366287759" duration="7126000" />
     </task>
     <servers />
   </component>
@@ -232,18 +260,27 @@
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="336" y="79" width="732" height="644" key="#Inspections/48.27.1318.741@48.27.1318.741" timestamp="1601020030386" />
+    <state x="165" y="40" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601364011822">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="165" y="40" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/48.27.1318.741@48.27.1318.741" timestamp="1601364011822" />
     <state x="518" y="193" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601026058442">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="518" y="193" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/48.27.1318.741@48.27.1318.741" timestamp="1601026058442" />
-    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600912240929">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600912240929" />
-    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601026917449">
+    <state x="48" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601370563412">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601026917449" />
+    <state x="48" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/48.27.1318.741@48.27.1318.741" timestamp="1601370563412" />
+    <state x="435" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601373555425">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="435" y="146" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601373555425" />
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600912240929" />
+    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601372258128">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601372258128" />
     <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600937875634" />
     <state width="1238" height="310" key="GridCell.Tab.0.bottom" timestamp="1600874394070">
       <screen x="72" y="27" width="1294" height="741" />
@@ -261,10 +298,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1238" height="310" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600874394070" />
-    <state x="493" y="117" width="585" height="568" key="NewPhpClassDialog" timestamp="1601026127164">
+    <state x="493" y="117" width="585" height="568" key="NewPhpClassDialog" timestamp="1601370664552">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="493" y="117" width="585" height="568" key="NewPhpClassDialog/48.27.1318.741@48.27.1318.741" timestamp="1601026127164" />
+    <state x="493" y="117" width="585" height="568" key="NewPhpClassDialog/48.27.1318.741@48.27.1318.741" timestamp="1601370664552" />
     <state x="509" y="117" width="441" height="568" key="NewPhpClassDialog/72.27.1294.741@72.27.1294.741" timestamp="1600936595250" />
     <state x="523" y="89" width="381" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600863604508">
       <screen x="72" y="27" width="1294" height="741" />
@@ -278,10 +315,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="378" y="158" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1600865672497" />
-    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup" timestamp="1601027018658">
+    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup" timestamp="1601373497386">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup/48.27.1318.741@48.27.1318.741" timestamp="1601027018658" />
+    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup/48.27.1318.741@48.27.1318.741" timestamp="1601373497386" />
     <state x="377" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1600866055204" />
     <state x="444" y="311" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600682123947">
       <screen x="72" y="27" width="1294" height="741" />

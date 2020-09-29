@@ -3,58 +3,36 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
+use App\Repositories\Login\LoginRepositoryEloquent;
 use Validator;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class PassportAuthController extends ResponseController
+
+class PassportAuthController extends Controller
 {
     /**
      * Register
      */
-    public function register(Request $request)
+    protected $userModel;
+
+    public function __construct(LoginRepositoryEloquent $userModel)
     {
-        $this->validate($request, [
-            'name' => 'required|min:4',
-            'email' => 'required|email',
-            'password' => 'required|min:8',
-        ]);
+        $this->userModel = $userModel;
+    }
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password)
-        ]);
-        $token = $user->createToken('LaravelAuthApp')->accessToken;
-
-        return response()->json(['token' => $token], 200);
+    public function register(RegisterRequest $request)
+    {
+        return $this->userModel->register($request->all());
     }
 
     /**
      * Login
      */
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|string|email',
-            'password' => 'required'
-        ]);
-
-        if ($validator->fails()) {
-            return $this->sendError($validator->errors());
-        }
-
-        $credentials = request(['email', 'password']);
-        if (!Auth::attempt($credentials)) {
-            $error = "Unauthorized";
-
-            return $this->sendError($error, 401);
-        }
-        $user = $request->user();
-        $success['token'] = $user->createToken('token')->accessToken;
-
-        return $this->sendResponse($success);
+        return $this->userModel->login($request);
     }
 
     /**
@@ -62,17 +40,7 @@ class PassportAuthController extends ResponseController
      */
     public function logout(Request $request)
     {
-
-        $isUser = $request->user()->token()->revoke();
-        if ($isUser) {
-            $success['message'] = "Successfully logged out.";
-
-            return $this->sendResponse($success);
-        } else {
-            $error = "Something went wrong.";
-
-            return $this->sendResponse($error);
-        }
+        return $this->userModel->logout($request);
     }
 
     /**
@@ -80,14 +48,6 @@ class PassportAuthController extends ResponseController
      */
     public function getUser(Request $request)
     {
-        $user = $request->user();
-        if ($user) {
-
-            return $this->sendResponse($user);
-        } else {
-            $error = "user not found";
-
-            return $this->sendResponse($error);
-        }
+        return $this->userModel->getUser($request);
     }
 }

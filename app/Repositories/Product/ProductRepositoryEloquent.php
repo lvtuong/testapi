@@ -46,7 +46,7 @@ class ProductRepositoryEloquent extends BaseRepository implements ProductReposit
     public function createProduct($data)
     {
         $slug = $data['name'];
-        $slug = str_replace( ' ', '-', $slug );
+        $slug = str_replace(' ', '-', $slug);
         $this->productModel::create([
             'name' => $data['name'],
             'slug' => $slug,
@@ -69,7 +69,7 @@ class ProductRepositoryEloquent extends BaseRepository implements ProductReposit
 
         $update = $this->productModel::find($data['id']);
         $slug = $data['name'];
-        $slug = str_replace( ' ', '-', $slug );
+        $slug = str_replace(' ', '-', $slug);
 
         return $update->update([
             'name' => $data['name'],
@@ -80,7 +80,8 @@ class ProductRepositoryEloquent extends BaseRepository implements ProductReposit
         ]);
     }
 
-    public function deleteProduct($id){
+    public function deleteProduct($id)
+    {
         $delete = $this->productModel::find($id);
         return $delete->delete();
     }

@@ -50,11 +50,12 @@ class CatProController extends Controller
      * Display the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return CategorieProduct[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
      */
     public function show($id)
     {
         //
+      return  CategorieProduct::all();
     }
 
     /**

@@ -36,7 +36,7 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
     public function createCategorie($data)
     {
         $slug = $data['name'];
-        $slug = str_replace( ' ', '-', $slug );
+        $slug = str_replace(' ', '-', $slug);
         return $this->categorieModel::create([
             'name' => $data['name'],
             'slug' => $slug,
@@ -47,14 +47,13 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
     public function showCategorie($id)
     {
 //        return $cate = $this->categorieModel::findOrFail($id)->products()->get();
-        return $cate = $this->categorieModel::findOrFail($id);
-//        foreach ($cate as $product){
-//            return $product->pivot->categorie_id;
-//        }
+        $cate = $this->categorieModel::findOrFail($id)->products()->get();
+        return $cate;
     }
 
     public function updateCategorie($data)
     {
+
         $update = $this->categorieModel::find($data['id']);
         $slug = $data['name'];
         $slug = str_replace(' ', '-', $slug);
@@ -64,8 +63,12 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
             'slug' => $slug,
             'description' => $data['description'],
         ]);
+
+
     }
-    public function deleteCategorie($id){
+
+    public function deleteCategorie($id)
+    {
         $delete = $this->categorieModel::find($id);
         $delete->delete();
     }
