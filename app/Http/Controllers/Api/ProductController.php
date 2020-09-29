@@ -7,7 +7,6 @@ use App\Http\Requests\CreateUpdateProductResquest;
 use App\Models\Products;
 use App\Repositories\Product\ProductRepositoryEloquent;
 
-use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
