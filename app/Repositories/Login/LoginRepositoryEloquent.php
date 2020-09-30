@@ -7,6 +7,8 @@ use Illuminate\Container\Container as Application;
 use Illuminate\Support\Facades\Auth;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
+use App\Repositories\Login\LoginRepository;
+use App\Entities\Login\Login;
 use App\Validators\Login\LoginValidator;
 
 /**
@@ -48,15 +50,16 @@ class LoginRepositoryEloquent extends BaseRepository implements LoginRepository
 
     public function login($request)
     {
+
         $credentials = request(['email', 'password']);
         if (!Auth::attempt($credentials)) {
             $error = "Unauthorized";
-            return $this->sendError($error, 401);
+            return response()->json($error, 401);
         }
         $user = $request->user();
         $success['token'] = $user->createToken('token')->accessToken;
 
-        return $this->sendResponse($success);
+        return response()->json($success, 200);
     }
 
     public function logout($request)
@@ -66,11 +69,11 @@ class LoginRepositoryEloquent extends BaseRepository implements LoginRepository
         if ($isUser) {
             $success['message'] = "Successfully logged out.";
 
-            return $this->sendResponse($success);
+            return response()->json($success, 200);
         } else {
             $error = "Something went wrong.";
 
-            return $this->sendResponse($error);
+            return response()->json($error);
         }
     }
 
@@ -79,29 +82,13 @@ class LoginRepositoryEloquent extends BaseRepository implements LoginRepository
         $user = $request->user();
         if ($user) {
 
-            return $this->sendResponse($user);
+            return response()->json($user, 200);
         } else {
             $error = "user not found";
 
-            return $this->sendResponse($error);
+            return response()->json($error);
         }
     }
-
-
-    public function sendError($error, $code = 404)
-    {
-        $response = [
-            'error' => $error,
-            'code' => $code
-        ];
-        return response()->json($response, $code);
-    }
-
-    public function sendResponse($response)
-    {
-        return response()->json($response, 200);
-    }
-
     /**
      * Boot up the repository, pushing criteria
      */
