@@ -33,9 +33,16 @@ class ProductRepositoryEloquent extends BaseRepository implements ProductReposit
         $this->productModel = $productModel;
     }
 
-    public function allProduct()
+    public function allProduct($pageNumber)
     {
-        return $this->productModel::all();
+        $limit = 5;
+        $offset = ($pageNumber - 1) * $limit;
+        $model = $this->productModel::skip($offset)->take($limit)->get();
+        return $model;
+//        $product = $this->productModel::Paginate(3, ['*'], 'page', $pageNumb>
+//
+//        return $product->setPath('url');
+
     }
 
     public function showProduct($id)

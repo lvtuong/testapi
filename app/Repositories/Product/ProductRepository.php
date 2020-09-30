@@ -12,7 +12,7 @@ use Prettus\Repository\Contracts\RepositoryInterface;
 interface ProductRepository extends RepositoryInterface
 {
     //
-    public function allProduct();
+    public function allProduct($pageNumber);
     public function showProduct($id);
     public function createProduct($data);
     public function updateProduct($data);

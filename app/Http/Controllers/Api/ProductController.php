@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUpdateProductResquest;
 use App\Models\Products;
 use App\Repositories\Product\ProductRepositoryEloquent;
+use Illuminate\Http\Request;
 
 
 class ProductController extends Controller
@@ -22,9 +23,9 @@ class ProductController extends Controller
         $this->productModel = $productModel;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-       return $this->productModel->allProduct();
+       return $this->productModel->allProduct($request['page']);
     }
 
     /**

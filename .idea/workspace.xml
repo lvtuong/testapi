@@ -24,7 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="aaaf827c-5f6a-467c-84b8-fc6e8e97d6b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Login/LoginRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Login/LoginRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_070247_create_product\_products_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_091745_create_categorie\_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_29_093557_create_login\_logins_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +224,7 @@
       <workItem from="1601363475983" duration="2788000" />
       <workItem from="1601366287759" duration="8817000" />
       <workItem from="1601428427221" duration="644000" />
+      <workItem from="1601474400117" duration="4013000" />
     </task>
     <servers />
   </component>
@@ -263,30 +270,35 @@
     </state>
     <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601372258128" />
     <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600937875634" />
-    <state width="1238" height="310" key="GridCell.Tab.0.bottom" timestamp="1600874394070">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1272" height="458" key="GridCell.Tab.0.bottom" timestamp="1601478045999">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
+    <state width="1272" height="458" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1601478045999" />
     <state width="1238" height="310" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600874394070" />
-    <state width="1238" height="310" key="GridCell.Tab.0.center" timestamp="1600874394070">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1272" height="458" key="GridCell.Tab.0.center" timestamp="1601478045998">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
+    <state width="1272" height="458" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1601478045998" />
     <state width="1238" height="310" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600874394070" />
-    <state width="1238" height="310" key="GridCell.Tab.0.left" timestamp="1600874394069">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1272" height="458" key="GridCell.Tab.0.left" timestamp="1601478045998">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
+    <state width="1272" height="458" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1601478045998" />
     <state width="1238" height="310" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600874394069" />
-    <state width="1238" height="310" key="GridCell.Tab.0.right" timestamp="1600874394070">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1272" height="458" key="GridCell.Tab.0.right" timestamp="1601478045998">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
+    <state width="1272" height="458" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1601478045998" />
     <state width="1238" height="310" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600874394070" />
     <state x="493" y="117" width="585" height="568" key="NewPhpClassDialog" timestamp="1601370664552">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="493" y="117" width="585" height="568" key="NewPhpClassDialog/48.27.1318.741@48.27.1318.741" timestamp="1601370664552" />
     <state x="509" y="117" width="441" height="568" key="NewPhpClassDialog/72.27.1294.741@72.27.1294.741" timestamp="1600936595250" />
-    <state x="523" y="89" width="381" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600863604508">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state x="507" y="89" width="381" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601476639566">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
+    <state x="507" y="89" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/48.27.1318.741@48.27.1318.741" timestamp="1601476639566" />
     <state x="523" y="89" width="381" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741@72.27.1294.741" timestamp="1600863604508" />
     <state x="398" y="136" width="618" height="522" key="find.popup" timestamp="1601027026883">
       <screen x="48" y="27" width="1318" height="741" />
