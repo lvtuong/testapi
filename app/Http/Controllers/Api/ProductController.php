@@ -20,12 +20,16 @@ class ProductController extends Controller
 
     public function __construct(ProductRepositoryEloquent $productModel)
     {
+        $this->middleware('permission:create product', ['only' => ['store']]);
+        $this->middleware('permission:delete product', ['only' => ['delete']]);
+//        $this->middleware('permission:create product|edit product', ['only' => ['create', 'store']]);
+
         $this->productModel = $productModel;
     }
 
     public function index(Request $request)
     {
-       return $this->productModel->allProduct($request['page']);
+        return $this->productModel->allProduct($request['page']);
     }
 
     /**
@@ -57,6 +61,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+//        dd('asd');
         return $this->productModel->showProduct($id);
     }
 
@@ -91,6 +96,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-       return $this->productModel->deleteProduct($id);
+
+        return $this->productModel->deleteProduct($id);
     }
 }

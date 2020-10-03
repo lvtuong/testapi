@@ -23,14 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaaf827c-5f6a-467c-84b8-fc6e8e97d6b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/product.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/product.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/PassportAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product/ProductRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Login/LoginRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Login/LoginRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Login/LoginRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Login/LoginRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_070247_create_product\_products_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_091745_create_categorie\_categories_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_29_093557_create_login\_logins_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +175,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/prettus/l5-repository" />
       <path value="$PROJECT_DIR$/vendor/prettus/laravel-validation" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hoevM8y2ECN0xla1r3WESyh4TL" />
@@ -224,7 +231,10 @@
       <workItem from="1601363475983" duration="2788000" />
       <workItem from="1601366287759" duration="8817000" />
       <workItem from="1601428427221" duration="644000" />
-      <workItem from="1601474400117" duration="4013000" />
+      <workItem from="1601474400117" duration="5236000" />
+      <workItem from="1601514023335" duration="20082000" />
+      <workItem from="1601622279828" duration="13082000" />
+      <workItem from="1601701538521" duration="941000" />
     </task>
     <servers />
   </component>
@@ -256,39 +266,39 @@
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="518" y="193" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/48.27.1318.741@48.27.1318.741" timestamp="1601026058442" />
-    <state x="48" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601370563412">
+    <state x="48" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601523548632">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="48" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/48.27.1318.741@48.27.1318.741" timestamp="1601370563412" />
-    <state x="435" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601373555425">
+    <state x="48" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/48.27.1318.741@48.27.1318.741" timestamp="1601523548632" />
+    <state x="435" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601625731420">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="435" y="146" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601373555425" />
+    <state x="435" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601625731420" />
     <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600912240929" />
-    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601372258128">
+    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601625572277">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601372258128" />
+    <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601625572277" />
     <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600937875634" />
-    <state width="1272" height="458" key="GridCell.Tab.0.bottom" timestamp="1601478045999">
+    <state width="1272" height="458" key="GridCell.Tab.0.bottom" timestamp="1601480026362">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="458" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1601478045999" />
+    <state width="1272" height="458" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1601480026362" />
     <state width="1238" height="310" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600874394070" />
-    <state width="1272" height="458" key="GridCell.Tab.0.center" timestamp="1601478045998">
+    <state width="1272" height="458" key="GridCell.Tab.0.center" timestamp="1601480026361">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="458" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1601478045998" />
+    <state width="1272" height="458" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1601480026361" />
     <state width="1238" height="310" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600874394070" />
-    <state width="1272" height="458" key="GridCell.Tab.0.left" timestamp="1601478045998">
+    <state width="1272" height="458" key="GridCell.Tab.0.left" timestamp="1601480026360">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="458" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1601478045998" />
+    <state width="1272" height="458" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1601480026360" />
     <state width="1238" height="310" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600874394069" />
-    <state width="1272" height="458" key="GridCell.Tab.0.right" timestamp="1601478045998">
+    <state width="1272" height="458" key="GridCell.Tab.0.right" timestamp="1601480026361">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="458" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1601478045998" />
+    <state width="1272" height="458" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1601480026361" />
     <state width="1238" height="310" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600874394070" />
     <state x="493" y="117" width="585" height="568" key="NewPhpClassDialog" timestamp="1601370664552">
       <screen x="48" y="27" width="1318" height="741" />
@@ -308,10 +318,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="378" y="158" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1600865672497" />
-    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup" timestamp="1601375279499">
+    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup" timestamp="1601701553034">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup/48.27.1318.741@48.27.1318.741" timestamp="1601375279499" />
+    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup/48.27.1318.741@48.27.1318.741" timestamp="1601701553034" />
     <state x="377" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1600866055204" />
     <state x="444" y="311" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600682123947">
       <screen x="72" y="27" width="1294" height="741" />

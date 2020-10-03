@@ -5,12 +5,15 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Models\User;
 use App\Repositories\Login\LoginRepositoryEloquent;
+
+use Illuminate\Support\Facades\Hash;
 use Validator;
 use Illuminate\Http\Request;
 
 
-class PassportAuthController extends Controller
+class UserController extends Controller
 {
     /**
      * Register
@@ -29,7 +32,10 @@ class PassportAuthController extends Controller
 
     /**
      * Login
+     * @param LoginRequest $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\JsonResponse|\Illuminate\Http\Response
      */
+//
     public function login(LoginRequest $request)
     {
         return $this->userModel->login($request);
@@ -50,4 +56,6 @@ class PassportAuthController extends Controller
     {
         return $this->userModel->getUser($request);
     }
+
+
 }
