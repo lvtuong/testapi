@@ -21,18 +21,28 @@ class PermissionUserController extends Controller
         return $this->userModel->createPermission($request);
     }
 
-    public function givePermission(Request $request)
+    public function givePermissionUser(Request $request)
     {
-        return $this->userModel->givePermission($request);
+        return $this->userModel->givePermissionUser($request);
     }
 
-    public function checkPermission(Request $request)
+    public function checkPermissionUser(Request $request)
     {
-        return $this->userModel->checkPermission($request);
+        return $this->userModel->checkPermissionUser($request);
     }
 
-    public function deletePermission(Request $request)
+    public function deletePermissionUser(Request $request)
     {
-        return $this->userModel->deletePermission($request);
+        return $this->userModel->deletePermissionUser($request);
+    }
+
+    public function addPermissionToRole(Request $request)
+    {
+        return $this->userModel->addPermissionToRole($request);
+    }
+
+    public function remotePermissionRole(Request $request)
+    {
+        return $this->userModel->remotePermissionRole($request);
     }
 }

@@ -34,11 +34,9 @@ Route::group(['prefix' => 'auth'], function () {
 
         // create roles & permission & middleware & give
         Route::group(['middleware' => ['role:super-admin|mod product']], function () {
-            // product
 
+            // product $ categories
             Route::apiResource('product', App\Http\Controllers\Api\ProductController::class);
-
-
             Route::apiResource('categories', App\Http\Controllers\Api\CategorieController::class);
             Route::apiResource('cat-pro', App\Http\Controllers\Api\CatProController::class);
 
@@ -51,9 +49,12 @@ Route::group(['prefix' => 'auth'], function () {
             Route::post('empower', [App\Http\Controllers\Api\PermissionUserController::class, 'givePermission']);
             Route::get('del-permission', [App\Http\Controllers\Api\PermissionUserController::class, 'deletePermission']);
 
+            // add permission to role
+            Route::post('permission-to-role', [App\Http\Controllers\Api\PermissionUserController::class, 'addPermissionToRole']);
+
+            // remoted permission from role
+            Route::post('remote-per', [App\Http\Controllers\Api\PermissionUserController::class, 'remotePermissionRole']);
         });
-
     });
-
 });
 

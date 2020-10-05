@@ -3,6 +3,7 @@
 namespace App\Repositories\PermissionRole;
 
 use App\Models\User;
+use http\Env\Response;
 use Illuminate\Container\Container as Application;
 use Illuminate\Support\Facades\Auth;
 use Prettus\Repository\Eloquent\BaseRepository;
@@ -43,12 +44,12 @@ class PermissonRoleRepositoryEloquent extends BaseRepository implements Permisso
      * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Model
      */
 
-    public function createPermission($request)
+    public function createPermissionUser($request)
     {
         return Permission::create(['name' => $request['permission']]);
     }
 
-    public function givePermission($request)
+    public function givePermissionUser($request)
     {
 
         $user = $this->user::find($request['id']);
@@ -58,7 +59,7 @@ class PermissonRoleRepositoryEloquent extends BaseRepository implements Permisso
 
     }
 
-    public function checkPermission($request)
+    public function checkPermissionUser($request)
     {
         $user = User::find($request['id']);
         if ($user) {
@@ -80,10 +81,40 @@ class PermissonRoleRepositoryEloquent extends BaseRepository implements Permisso
 
     }
 
-    public function deletePermission($request)
+    public function deletePermissionUser($request)
     {
         $user = $this->user::find($request['id']);
         return $permission = $user->revokePermissionTo($request['permission']);
+    }
+
+    public function addPermissionToRole($request)
+    {
+        $role = Role::findByName($request['role']);
+        $permission = Permission::findByName($request['permission']);
+
+        return $role->givePermissionTo($permission);
+//        $permission->assignRole($role);
+
+    }
+
+    public function remotePermissionRole($request)
+    {
+        //check role & permission
+        $role = Role::all()->where('name', $request['role']);
+        $permission = Permission::all()->where('name', $request['permission']);
+        if ($role->isEmpty() == true) {
+            return response()->json(['error' => "not role"], 422);
+        } else {
+
+            if ($permission->isEmpty() == true) {
+                return response()->json(['error' => "permission not found"], 422);
+            }
+            //remote permission from role;
+            $role = Role::findByName($request['role']);
+            $permission = Permission::findByName($request['permission']);
+
+            return response()->json(['success' => "remote ok", $role->revokePermissionTo($permission)]);
+        }
     }
     /**
      * END PERMISSION
@@ -103,15 +134,26 @@ class PermissonRoleRepositoryEloquent extends BaseRepository implements Permisso
 
     public function giveRoleUser($request)
     {
-
         $user = $this->user::find($request['id']);
-        $role = $request['role'];
-        //check role
-        $roles = Role::findByName($role)->name;
-        if ($roles) {
-            $user->assignRole($role);
 
-            return response()->json(['permission' => $user], 200);
+        $role = $request['role'];
+
+        $check_role = Role::all()->where('name', $role);
+        //check role
+
+        if ($user) {
+            if ($check_role->isEmpty() == true) {
+                $error = "role not found";
+                return response()->json(['error' => $error], 422);
+            } else {
+                $role = Role::findByName($role);
+                $user->assignRole($role);
+
+                return response()->json(['role' => $user], 200);
+            }
+        } else {
+            $error = "user not found";
+            return response()->json(['error' => $error], 422);
         }
     }
 
@@ -123,7 +165,7 @@ class PermissonRoleRepositoryEloquent extends BaseRepository implements Permisso
             if ($user->isEmpty()) {
                 $error = "user not role";
 
-                return response()->json($error);
+                return response()->json($error, 422);
 
             } else {
                 foreach ($user as $role) {
@@ -135,8 +177,6 @@ class PermissonRoleRepositoryEloquent extends BaseRepository implements Permisso
             $error = "user not found";
             return response()->json(['error' => $error], 422);
         }
-
-
     }
 
     /**
@@ -146,6 +186,7 @@ class PermissonRoleRepositoryEloquent extends BaseRepository implements Permisso
 
     /**
      * Boot up the repository, pushing criteria
+     * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
     public function boot()
     {

@@ -54,8 +54,6 @@ class LoginRepositoryEloquent extends BaseRepository implements LoginRepository
      *
      * @return \Illuminate\Http\Response
      */
-    public $successStatus = 200;
-
     public function login($request)
     {
         $user = $this->user::where('email', $request->email)->first();
@@ -76,9 +74,9 @@ class LoginRepositoryEloquent extends BaseRepository implements LoginRepository
 
     public function logout($request)
     {
-        $isUser = $request->user()->token()->revoke();
+        $is_user = $request->user()->token()->revoke();
 
-        if ($isUser) {
+        if ($is_user) {
             $success['message'] = "Successfully logged out.";
 
             return response()->json($success, 200);
@@ -105,6 +103,7 @@ class LoginRepositoryEloquent extends BaseRepository implements LoginRepository
 
     /**
      * Boot up the repository, pushing criteria
+     * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
     public function boot()
     {

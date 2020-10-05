@@ -28,12 +28,12 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
         parent::__construct($app);
     }
 
-    public function allCategorie()
+    public function allCategories()
     {
         return $this->categorieModel::all();
     }
 
-    public function createCategorie($data)
+    public function createCategories($data)
     {
         $slug = $data['name'];
         $slug = str_replace(' ', '-', $slug);
@@ -44,14 +44,14 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
         ]);
     }
 
-    public function showCategorie($id)
+    public function showCategories($id)
     {
 //        return $cate = $this->categorieModel::findOrFail($id)->products()->get();
         $cate = $this->categorieModel::findOrFail($id)->products()->get();
         return $cate;
     }
 
-    public function updateCategorie($data)
+    public function updateCategories($data)
     {
 
         $update = $this->categorieModel::find($data['id']);
@@ -63,11 +63,9 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
             'slug' => $slug,
             'description' => $data['description'],
         ]);
-
-
     }
 
-    public function deleteCategorie($id)
+    public function deleteCategories($id)
     {
         $delete = $this->categorieModel::find($id);
         $delete->delete();
@@ -81,6 +79,7 @@ class CategorieRepositoryEloquent extends BaseRepository implements CategorieRep
 
     /**
      * Boot up the repository, pushing criteria
+     * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
     public function boot()
     {

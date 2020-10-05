@@ -12,10 +12,12 @@ use Prettus\Repository\Contracts\RepositoryInterface;
 interface PermissonRoleRepository extends RepositoryInterface
 {
     //==========permission=========//
-    public function createPermission($request);
-    public function givePermission($request);
-    public function checkPermission($request);
-    public function deletePermission($request);
+    public function createPermissionUser($request);
+    public function givePermissionUser($request);
+    public function checkPermissionUser($request);
+    public function deletePermissionUser($request);
+    public function addPermissionToRole($request);
+    public function remotePermissionRole($request);
 
     //===============role==========//
     public function createRoleUser($request);

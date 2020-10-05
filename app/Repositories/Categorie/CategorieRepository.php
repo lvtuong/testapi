@@ -11,10 +11,10 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  */
 interface CategorieRepository extends RepositoryInterface
 {
-    public function allCategorie();
-    public function createCategorie($data);
-    public function showCategorie($id);
-    public function updateCategorie($data);
-    public function deleteCategorie($id);
+    public function allCategories();
+    public function createCategories($data);
+    public function showCategories($id);
+    public function updateCategories($data);
+    public function deleteCategories($id);
 
 }

@@ -24,7 +24,7 @@ class CategorieController extends Controller
 
     public function index()
     {
-        return $this->categorieModel->allCategorie();
+        return $this->categorieModel->allCategories();
     }
 
 
@@ -46,7 +46,7 @@ class CategorieController extends Controller
      */
     public function store(CreateUpdateCategoriRequest $request)
     {
-        return $this->categorieModel->createCategorie($request->all());
+        return $this->categorieModel->createCategories($request->all());
     }
 
     /**
@@ -57,7 +57,7 @@ class CategorieController extends Controller
      */
     public function show($id)
     {
-        return $this->categorieModel->showCategorie($id);
+        return $this->categorieModel->showCategories($id);
     }
 
     /**
@@ -81,7 +81,7 @@ class CategorieController extends Controller
     public function update(CreateUpdateCategoriRequest $request)
     {
 
-        return $this->categorieModel->updateCategorie($request->all());
+        return $this->categorieModel->updateCategories($request->all());
 
     }
 
@@ -93,6 +93,6 @@ class CategorieController extends Controller
      */
     public function destroy($id)
     {
-        $this->categorieModel->deleteCategorie($id);
+        $this->categorieModel->deleteCategories($id);
     }
 }

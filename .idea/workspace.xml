@@ -23,20 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaaf827c-5f6a-467c-84b8-fc6e8e97d6b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/product.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/product.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/PassportAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Login/LoginRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Login/LoginRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategorieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategorieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/PermissionUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PermissionUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Categorie/CategorieRepositoryEloquent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Login/LoginRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Login/LoginRepositoryEloquent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/PermissionRole/PermissonRoleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PermissionRole/PermissonRoleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/PermissionRole/PermissonRoleRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PermissionRole/PermissonRoleRepositoryEloquent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +183,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/training laravel/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -234,7 +230,8 @@
       <workItem from="1601474400117" duration="5236000" />
       <workItem from="1601514023335" duration="20082000" />
       <workItem from="1601622279828" duration="13082000" />
-      <workItem from="1601701538521" duration="941000" />
+      <workItem from="1601701538521" duration="1935000" />
+      <workItem from="1601881150338" duration="10078000" />
     </task>
     <servers />
   </component>
@@ -280,6 +277,10 @@
     </state>
     <state x="435" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1318.741@48.27.1318.741" timestamp="1601625572277" />
     <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1600937875634" />
+    <state x="490" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601886821745">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="490" y="155" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741@48.27.1318.741" timestamp="1601886821745" />
     <state width="1272" height="458" key="GridCell.Tab.0.bottom" timestamp="1601480026362">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
@@ -318,10 +319,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="378" y="158" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1600865672497" />
-    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup" timestamp="1601701553034">
+    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup" timestamp="1601889561019">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup/48.27.1318.741@48.27.1318.741" timestamp="1601701553034" />
+    <state x="359" y="89" width="685" height="678" key="search.everywhere.popup/48.27.1318.741@48.27.1318.741" timestamp="1601889561019" />
     <state x="377" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1600866055204" />
     <state x="444" y="311" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600682123947">
       <screen x="72" y="27" width="1294" height="741" />
